@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int SPS,i;
+  SPS = rand() % 3+1;
+  cout <<SPS;
+  switch (SPS) {
+  case 1:
+    cout << "Stone";
+    break;
+  case 2:
+    cout << "\nPaper";
+    break;
+  case 3:
+    cout << "Scissor";
+    break;
+  }
+  cout <<"\nEnter 1-Stone 2-Paper 3-Scissor:";
+  cin >>i;
+  
+  if(SPS==i)
+  {
+      cout<<"Draw";
+  }
+  else if(SPS==1 && i==2)
+  {
+      cout<<"Player win paper";
+  }
+  else if(SPS==2 && i==3)
+  {
+      cout<<"Player win Scissor";
+  }
+  return 0;
+}
